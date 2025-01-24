@@ -1,0 +1,182 @@
+/* Ensure the body has proper styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333; 
+}
+
+/* Main container for the slot machine */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%; 
+  max-width: 400px;
+}
+
+/* Header */
+.App h1 {
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+/* Credits and Winnings */
+.App p {
+  font-size: 1.2rem;
+  margin: 5px;
+  color: #333; 
+}
+
+/* Reels */
+  .reels {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    overflow: hidden; 
+    height: 100px; 
+}
+
+.reels.highlight .reel {
+  animation: glow 1s infinite alternate; 
+}
+
+.reel {
+  font-size: 4rem;
+  margin: 0 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+/* Spin Button */
+.spin-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.spin-button:hover {
+  background-color: #e68a00;
+  transform: scale(1.05); 
+}
+
+.spin-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* Glowing effect */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ff9800;
+  }
+  to {
+    box-shadow: 0 0 20px #ff9800, 0 0 30px #ffd700, 0 0 40px #ffd700;
+  }
+}
+
+/* Centered win alert */
+.win-alert {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999;
+}
+
+.win-alert-content {
+  background-color: #4caf50; 
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Try Again Screen */
+.try-again-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8); 
+  z-index: 999;
+}
+
+.try-again-content {
+  background-color: #ff9800; 
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.reset-button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: white;
+  color: #ff9800;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #ffd27f;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
