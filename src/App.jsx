@@ -68,7 +68,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>React Slot Machine</h1>
+      <h1>Slot Machine</h1>
       <div>
         <p>Credits: {credits}</p>
         <p>Winnings: {winnings}</p>
